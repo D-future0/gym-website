@@ -1,10 +1,20 @@
+import { useState } from "react"
+import NavBar from "./scenes/NavBar"
 
+enum SelectedPage{
+Home = 'home',
+Benefits = 'benefits',
+OurClasses = 'ourclasses',
+ContactUs = 'contactus',
+}
 function App() {
-
+const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
   return (
-    <>
-    <h2 className='text-[#3434f3] text-3xl'>TypeScript</h2>
-    </>
+    <div className='bg-[#F8F4EB]'><NavBar
+    selectedPage={selectedPage}
+    setSelectedPage={selectedPage}
+    />
+    </div>
   )
 }
 
