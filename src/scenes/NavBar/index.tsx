@@ -38,20 +38,20 @@ function NavBar({ selectedPage, setSelectedPage }: Props) {
                 </div>
               </div> :
               <button className='rounded-full bg-[#FFC132] p-2' onClick={() => { setIsMenuToggle(!isMenuToggle) }}>
-                <Bars3Icon width={30} className='text-gray-400 text-3xl' />
+                <Bars3Icon width={30} className='text-gray-100 text-3xl' />
               </button>
           }
         </div>
         {/*moble menu*/}
         {
           !isAboveMediumScreen && isMenuToggle ?
-            <div className='fixed right-0 bottom-0 z-40 h-full w-[280px] bg-[#FFE1E0]'>
+            <div className='fixed right-0 bottom-0 z-40 h-full w-[250px] bg-[#FFE1E0]'>
               <div className='flex justify-end items-center py-6 px-10'>
                 <button className='rounded-full bg-[#FFE1E0] p-2' onClick={() => { setIsMenuToggle(!isMenuToggle); }}>
                   <XMarkIcon width={30} className='text-gray-400 text-3xl' />
                 </button>
               </div>
-              <div className='ml-[33%] flex flex-col gap-8'>
+              <div className='ml-[33%] text-xl flex flex-col gap-8'>
                 <Link page='Home' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                 <Link page='Benefit' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                 <Link page='Our Classes' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
