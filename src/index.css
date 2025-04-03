@@ -7,3 +7,15 @@ html, body, #root, .app{
     font-family: "DM sans", sans-serif;
     color: "#5E0000";
 }
+/* .evolveText::before{
+    content: "";
+    position: absolute;
+    top: -5rem;
+    left: -2rem;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    background-image: url("/src/assets/EvolveText.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
