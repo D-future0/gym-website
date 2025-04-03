@@ -33,7 +33,7 @@ const Home = ({ setSelectedPage }: Props) => {
                                 <img src={HomePageText} alt="home-page-text" />
                             </div>
                         <p className=" my-6">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita omnis saepe officiis necessitatibus atque, impedit quis, et earum unde ratione exercitationem odit veniam perferendis mollitia velit. Non maxime sapiente id.
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita omnis saepe officiis necessitatibus atque, impedit.
                         </p>
                     </div>
                     {/*headings*/}
