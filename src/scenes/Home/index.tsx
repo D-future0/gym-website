@@ -26,11 +26,11 @@ const Home = ({ setSelectedPage }: Props) => {
                 {/*image and main header*/}
                 {/*main header*/}
                 <img src="/src/assets/EvolveText.png" alt="EvolveText" className="absolute hidden lg:block z-[10] top-22 -left-5 w-1/2" />
-                <div className="z-10 my-6 mt-32 md:basis-3/5">
+                <div className="z-10 my-4 mt-18 lg:mt-32 md:basis-3/5">
                     {/*headings*/}
                     <div className="pt-6">
                         <div>
-                            <img src={HomePageText} width={400} alt="home-page-text"/>
+                            <img src={HomePageText} width={400} alt="home-page-text" />
                         </div>
                         <p className=" my-6">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita omnis saepe officiis necessitatibus atque, impedit.
@@ -47,8 +47,8 @@ const Home = ({ setSelectedPage }: Props) => {
                     </div>
                 </div>
                 {/*image*/}
-                <div className="flex justify-center items-center max-w-80 md:z-10
-             my-8 md:mt-16 md:justify-items-end lg:ml-40">
+                <div className="flex justify-center items-center max-w-90 md:z-10
+              sm:mt-16 md:justify-items-end lg:ml-40">
                     <img alt="home-pageGraphic" src={HomePageGraphic} />
                 </div>
             </div>
