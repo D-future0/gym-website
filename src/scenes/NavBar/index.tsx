@@ -2,7 +2,7 @@
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/16/solid'
 import Logo from '@/assets/logo.png'
 import Link from './Link'
-import { SelectedPage } from "@/shared/Types/SelectedPage"
+import { SelectedPage } from "@/shared/Types/Types"
 import useMediaQuery from '@/hooks/useMediaQuery';
 import { useState } from 'react';
 import ActionButton from '@/shared/ActionButton';
@@ -48,7 +48,7 @@ function NavBar({ isTopOfScreen, selectedPage, setSelectedPage }: Props) {
         {/*moble menu*/}
         {
           !isAboveMediumScreen && isMenuToggle ?
-            <div className='fixed right-0 bottom-0 z-40 h-full w-[250px] bg-[#FFE1E0]'>
+            <div className='fixed right-0 bottom-0 z-60 h-full w-[250px] bg-[#FFE1E0]'>
               <div className='flex justify-end items-center py-6 px-10'>
                 <button className='rounded-full bg-[#FFE1E0] p-2' onClick={() => { setIsMenuToggle(!isMenuToggle); }}>
                   <XMarkIcon width={30} className='text-gray-400 text-3xl' />
