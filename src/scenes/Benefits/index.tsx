@@ -1,4 +1,5 @@
 
+import ActionButton from "@/shared/ActionButton"
 import Benefit from "@/shared/Benefit/Benefit"
 import Htext from "@/shared/Htext"
 import { BenefitsType, SelectedPage } from "@/shared/Types/Types"
@@ -13,16 +14,16 @@ type Props = {
 const containerVariants = {
     hidden: { opacity: 0 },
     show: {
-      opacity: 1,
-      transition: ({
-        staggerChildren: 0.2, // Delay between items
-      })
+        opacity: 1,
+        transition: ({
+            staggerChildren: 0.2, // Delay between items
+        })
     },
-  };
-const itemVariants1 =  {
+};
+const itemVariants1 = {
     hidden: { x: -50, opacity: 0 },
-    show: { x: 0, opacity: 1, transition:{duration:0.5, ease:"easeInOut"} },
-  };
+    show: { x: 0, opacity: 1, transition: { duration: 0.5, ease: "easeInOut" } },
+};
 
 const benefit: Array<BenefitsType> = [
     {
@@ -49,29 +50,64 @@ const Benefits = ({ setSelectedPage }: Props) => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
-            onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
+            onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
             id="benefits" className="mx-auto min-h-full w-5/6 py-6">
-                <div className="my-6 md:w-w-5/6">
+            <div className="my-6 md:w-w-5/6">
                 <motion.div variants={itemVariants1}>
                     <Htext>More Than Just A Gym</Htext>
                 </motion.div>
-                    <motion.p variants={itemVariants1} className="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex temporibus dolorum ipsum odit laborum. Expedita beatae, ullam delectus tenetur amet voluptatibus harum ipsum facere temporibus dolores culpa modi quas. Ea.</motion.p>
-                    <div className="md:flex items-center justify-between">
-                        {benefit.map((benefit) => {
-                            return (
-                                <div>
-                                    <Benefit
-                                        key={benefit.title}
-                                        icon={benefit.icon}
-                                        title={benefit.title}
-                                        description={benefit.description}
-                                        setSelectedPage={setSelectedPage}
-                                    />
-                                </div>
-                            )
-                        })}
-                    </div>
+                <motion.p variants={itemVariants1} className="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex temporibus dolorum ipsum odit laborum. Expedita beatae, ullam delectus tenetur amet voluptatibus harum ipsum facere temporibus dolores culpa modi quas. Ea.</motion.p>
+                <div className="md:flex items-center justify-between">
+                    {benefit.map((benefit) => {
+                        return (
+                            <div>
+                                <Benefit
+                                    key={benefit.title}
+                                    icon={benefit.icon}
+                                    title={benefit.title}
+                                    description={benefit.description}
+                                    setSelectedPage={setSelectedPage}
+                                />
+                            </div>
+                        )
+                    })}
                 </div>
+                <div className="lg:flex items-center lg:justify-between gap-20 mt-20">
+                    <motion.div 
+                    variants={itemVariants1}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.2 }}
+                    onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
+                    className="w-full lg:w-1/2 flex items-center justify-center">
+                    <img src="/src/assets/BenefitsPageGraphic.png" alt="BenefitsPageGraphic" />
+                    </motion.div>
+                    <motion.div 
+                    variants={itemVariants1}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.2 }}
+                    onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
+                    className="lg:w-1/2 ">
+                        <div className="relative py-5">
+                            <img src="/src/assets/AbstractWaves.png" alt="AbstractWaves.png" className="absolute lg:block z-[10] -top-14 -left-5"/>
+                            <div>
+                                <Htext>MILLIONS OF HAPPY MEMBERS GETTING{" "} <span className="text-[#FF616A]">FIT</span></Htext>
+                            </div>
+                        </div>
+                        <div>
+                            <p className="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi odio necessitatibus tempore exercitationem debitis eligendi facilis, sint, minus officiis aperiam sequi. Suscipit adipisci fugit natus.</p>
+                            <p className="mb-5 z-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi odio necessitatibus tempore exercitationem debitis eligendi facilis, sint, minus officiis aperiam sequi. Suscipit adipisci fugit natus.</p>
+                        </div>
+                        <div>
+                            <div className="relative">
+                            <ActionButton setSelectedPage={setSelectedPage}>Join now</ActionButton>
+                            <img src="/src/assets/Sparkles.png" alt="AbstractWaves.png" className="absolute lg:block  -top-14 right-5"/>
+                            </div>
+                        </div>
+                    </motion.div>
+                </div>
+            </div>
         </motion.section>
     )
 }
