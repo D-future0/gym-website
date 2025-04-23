@@ -31,7 +31,7 @@ function NavBar({ isTopOfScreen, selectedPage, setSelectedPage }: Props) {
               <div className={`${flexBetween} w-full gap-8`}>
                 <div className={`${flexBetween} w-full gap-8`}>
                   <Link page='Home' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                  <Link page='Benefit' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                  <Link page='Benefits' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                   <Link page='Our Classes' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                   <Link page='Contact Us' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                 </div>
@@ -56,7 +56,7 @@ function NavBar({ isTopOfScreen, selectedPage, setSelectedPage }: Props) {
               </div>
               <div className='ml-[25%] text-xl flex flex-col gap-8'>
                 <Link page='Home' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                <Link page='Benefit' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                <Link page='Benefits' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                 <Link page='Our Classes' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                 <Link page='Contact Us' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
               </div>

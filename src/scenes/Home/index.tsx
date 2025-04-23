@@ -75,7 +75,9 @@ const Home = ({ setSelectedPage }: Props) => {
                     <img alt="home-pageGraphic" src={HomePageGraphic} />
                 </motion.div>
             </div>
-            <motion.div variants={itemVariants2} className="h-[110px] w-full bg-[#FFE1E0] py-6">
+            <motion.div 
+            onViewportEnter={()=> setSelectedPage(SelectedPage.Home)}
+            variants={itemVariants2} className="h-[110px] w-full bg-[#FFE1E0] py-6">
                 <div className="flex flex-row items-center justify-center">
                     <div className="flex flex-row justify-between w-5/6 md:w-2/3">
                         <img src={SponsorRedBull} alt='sponsor red bull' />

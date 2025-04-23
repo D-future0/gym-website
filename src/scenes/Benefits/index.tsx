@@ -5,6 +5,9 @@ import Htext from "@/shared/Htext"
 import { BenefitsType, SelectedPage } from "@/shared/Types/Types"
 import { UserGroupIcon, HomeModernIcon, AcademicCapIcon } from "@heroicons/react/16/solid"
 import { motion } from "framer-motion"
+import BenefitsPageGraphic from '@/assets/BenefitsPageGraphic.png'
+import Sparkles from '@/assets/Sparkles.png'
+import AbstractWaves from '@/assets/AbstractWaves.png'
 
 
 type Props = {
@@ -50,7 +53,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
-            onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
+            onViewportEnter={()=> setSelectedPage(SelectedPage.Benefits)}
             id="benefits" className="mx-auto min-h-full w-5/6 py-6">
             <div className="my-6 md:w-w-5/6">
                 <motion.div variants={itemVariants1}>
@@ -78,19 +81,18 @@ const Benefits = ({ setSelectedPage }: Props) => {
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true, amount: 0.2 }}
-                    onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
+                    onViewportEnter={()=> setSelectedPage(SelectedPage.Benefits)}
                     className="w-full lg:w-1/2 flex items-center justify-center">
-                    <img src="/src/assets/BenefitsPageGraphic.png" alt="BenefitsPageGraphic" />
+                    <img src={BenefitsPageGraphic} alt="BenefitsPageGraphic" />
                     </motion.div>
                     <motion.div 
                     variants={itemVariants1}
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true, amount: 0.2 }}
-                    onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
                     className="lg:w-1/2 ">
                         <div className="relative py-5">
-                            <img src="/src/assets/AbstractWaves.png" alt="AbstractWaves.png" className="absolute lg:block z-[10] -top-14 -left-5"/>
+                            <img src={AbstractWaves} alt="AbstractWaves" className="absolute lg:block z-[10] -top-14 -left-5"/>
                             <div>
                                 <Htext>MILLIONS OF HAPPY MEMBERS GETTING{" "} <span className="text-[#FF616A]">FIT</span></Htext>
                             </div>
@@ -102,7 +104,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
                         <div>
                             <div className="relative">
                             <ActionButton setSelectedPage={setSelectedPage}>Join now</ActionButton>
-                            <img src="/src/assets/Sparkles.png" alt="AbstractWaves.png" className="absolute lg:block  -top-14 right-5"/>
+                            <img src={Sparkles} alt="Sparkles" className="absolute lg:block  -top-14 right-5"/>
                             </div>
                         </div>
                     </motion.div>

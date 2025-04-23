@@ -21,7 +21,7 @@ const Benefit = ({ icon, title, description, setSelectedPage }: Props) => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
-            onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
+            onViewportEnter={()=> setSelectedPage(SelectedPage.Benefits)}
             className='mt-5 rounded-md border border-[#DFCCCC] px-5 py-8 mx-3 text-center'>
             <div className='mb-4 flex justify-center'>
                 <div className='p-2 rounded-full border boreder-[#DFCCCC] bg-[#FFE1E0]'>
