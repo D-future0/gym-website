@@ -11,34 +11,33 @@ import Class from '@/shared/Class';
 
 const classes: Array<ClassType> = [
   {
-    title:"Lorem ipsum dolor",
-    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique distinctio nesciunt debitis iure accusantium optio.",
-    image:image1,
+    title: "Lorem ipsum dolor",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique distinctio nesciunt debitis iure accusantium optio.",
+    image: image1,
   },
   {
-    title:"Lorem ipsum dolor",
-    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique distinctio nesciunt debitis iure accusantium optio.",
-    image:image2,
+    title: "Lorem ipsum dolor",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique distinctio nesciunt debitis iure accusantium optio.",
+    image: image2,
   },
   {
-    title:"Lorem ipsum dolor",
-    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique distinctio nesciunt debitis iure accusantium optio.",
-    image:image3,
+    title: "Lorem ipsum dolor",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique distinctio nesciunt debitis iure accusantium optio.",
+    image: image3,
   },
   {
-    title:"Lorem ipsum dolor",
-    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique distinctio nesciunt debitis iure accusantium optio.",
-    image:image4,
+    title: "Lorem ipsum dolor",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique distinctio nesciunt debitis iure accusantium optio.",
+    image: image4,
   },
   {
-    title:"Lorem ipsum dolor",
-    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique distinctio nesciunt debitis iure accusantium optio.",
-    image:image5,
+    title: "Lorem ipsum dolor",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique distinctio nesciunt debitis iure accusantium optio.",
+    image: image5,
   },
   {
-    title:"Lorem ipsum dolor",
-    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique distinctio nesciunt debitis iure accusantium optio.",
-    image:image6,
+    title: "Lorem ipsum dolor",
+    image: image6,
   },
 ]
 
@@ -61,32 +60,39 @@ const containerVariants = {
 // };
 
 type Props = {
-    setSelectedPage:(value: SelectedPage) => void
+  setSelectedPage: (value: SelectedPage) => void
 }
 
-const OurClasses = ({setSelectedPage}: Props) => {
+const OurClasses = ({ setSelectedPage }: Props) => {
   return (
-    <motion.section 
-    onViewportEnter={()=> setSelectedPage(SelectedPage.Home)}className='w-full bg-[#FFE1E0] py-10'> 
-    <motion.div
-    variants={containerVariants}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount:0.2 }}
-                id="home"
-    > 
-    <div className='md:w-3/5'>
-      <Htext>Our Classes</Htext>
-      <p className='py-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique distinctio nesciunt debitis iure accusantium optio. Ea, illo non qui deserunt corporis ab impedit sed totam!</p>
-    </div>
-    <div className='mt-10 h-[350px] w-full overflow-x-auto overflow-y-hidden'>
-    <ul className='w-[28000px] whitespace-nowrap'>
-    {classes.map((item:ClassType , index)=>(
-      <Class key={`${item.title}-${index}`}/>
-    ))}
-    </ul>
-    </div>
-    </motion.div>
+    <motion.section
+      onViewportEnter={() => setSelectedPage(SelectedPage.OurClasses)} className='w-full bg-[#FFE1E0] py-10'>
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        id="ourclasses"
+        className='mt-10'
+      >
+        <div className='flex flex-col items-center'>
+          <Htext>Our Classes</Htext>
+          <div className='md:w-3/5 text-center'>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique distinctio nesciunt debitis iure accusantium optio. Ea, illo non qui deserunt corporis ab impedit sed totam!</p>
+          </div>
+        </div>
+        <div className='mt-10 h-[350px] w-full overflow-x-auto overflow-y-hidden'>
+          <ul className='w-[2800px] whitespace-nowrap'>
+            {classes.map((item: ClassType, index) => (
+              <Class key={`${item.title}-${index}`}
+                title={item.title}
+                description={item.description || ""}
+                image={item.image}
+              />
+            ))}
+          </ul>
+        </div>
+      </motion.div>
     </motion.section>
   )
 }

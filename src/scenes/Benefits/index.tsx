@@ -54,12 +54,16 @@ const Benefits = ({ setSelectedPage }: Props) => {
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
             onViewportEnter={()=> setSelectedPage(SelectedPage.Benefits)}
-            id="benefits" className="mx-auto min-h-full w-5/6 py-6">
-            <div className="my-6 md:w-w-5/6">
+            id="benefits" className="mx-auto min-h-full w-5/6 py-10">
+            <div className="my-16">
+                <div className="flex flex-col items-center">
                 <motion.div variants={itemVariants1}>
                     <Htext>More Than Just A Gym</Htext>
                 </motion.div>
+                <div className='md:w-5/6 text-center'>
                 <motion.p variants={itemVariants1} className="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex temporibus dolorum ipsum odit laborum. Expedita beatae, ullam delectus tenetur amet voluptatibus harum ipsum facere temporibus dolores culpa modi quas. Ea.</motion.p>
+                </div>
+                </div>
                 <div className="md:flex items-center justify-between">
                     {benefit.map((benefit) => {
                         return (

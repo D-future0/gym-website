@@ -9,8 +9,8 @@ icon: React.ReactNode;
 title: string;
 description: string;
 }
-export interface ClassType{
+export interface  ClassType{
 title: string;
 description?: string;
-image: string
+image: string;
 }
