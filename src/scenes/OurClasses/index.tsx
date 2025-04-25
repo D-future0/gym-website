@@ -41,23 +41,6 @@ const classes: Array<ClassType> = [
   },
 ]
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: ({
-      staggerChildren: 0.2, // Delay between items
-    })
-  },
-};
-// const itemVariants1 =  {
-//   hidden: { x: -50, opacity: 0 },
-//   show: { x: 0, opacity: 1, transition:{duration:0.5, ease:"easeInOut"} },
-// };
-// const itemVariants2 =  {
-//   hidden: { y: 50, opacity: 0 },
-//   show: { y: 0, opacity: 1, transition:{duration:0.5, ease:"easeInOut"} },
-// };
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void
@@ -65,13 +48,10 @@ type Props = {
 
 const OurClasses = ({ setSelectedPage }: Props) => {
   return (
-    <motion.section
-      onViewportEnter={() => setSelectedPage(SelectedPage.OurClasses)} className='w-full bg-[#FFE1E0] py-10'>
+    <section
+      className='w-full bg-[#FFE1E0] py-10'>
       <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
+        onViewportEnter={() => setSelectedPage(SelectedPage.OurClasses)} 
         id="ourclasses"
         className='mt-10'
       >
@@ -93,7 +73,7 @@ const OurClasses = ({ setSelectedPage }: Props) => {
           </ul>
         </div>
       </motion.div>
-    </motion.section>
+    </section>
   )
 }
 
