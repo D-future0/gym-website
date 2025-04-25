@@ -3,6 +3,7 @@ import { SelectedPage } from "@/shared/Types/Types"
 import { motion } from "framer-motion"
 import { useForm } from "react-hook-form";
 import ContactUsPageGraphic from "@/assets/ContactUsPageGraphic.png"
+import EvolveText from "@/assets/EvolveText.png"
 
 
 
@@ -120,7 +121,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                 viewport={{ once: true, amount: 0.2 }}
                 className="relative w-full flex justify-center items-center mt-20 lg:mt-0 lg:max-w-1/2"
                 >
-                    <img src="/src/assets/EvolveText.png" alt="ContactUsPageGraphic" className="absolute md:block z-[10] -bottom-14 -left-5 hidden"/>
+                    <img src={EvolveText} alt="ContactUsPageGraphic" className="absolute md:block z-[10] -bottom-14 -left-5 hidden"/>
                     <div>
                     <img src={ContactUsPageGraphic} alt="ContactUsPageGraphic" className="max-w-2xl"/>
                     </div>
