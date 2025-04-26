@@ -49,15 +49,15 @@ type Props = {
 const OurClasses = ({ setSelectedPage }: Props) => {
   return (
     <section
-      className='w-full bg-[#FFE1E0] py-10'>
+      className='w-full bg-[#FFE1E0] pb-5'>
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.OurClasses)} 
         id="ourclasses"
-        className='mt-10'
+        className='pt-24'
       >
-        <div className='flex flex-col items-center'>
+        <div className='flex flex-col md:items-center px-8'>
           <Htext>Our Classes</Htext>
-          <div className='md:w-3/5 text-center'>
+          <div className='md:w-3/5 md:text-center text-left mb-5'>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique distinctio nesciunt debitis iure accusantium optio. Ea, illo non qui deserunt corporis ab impedit sed totam!</p>
           </div>
         </div>

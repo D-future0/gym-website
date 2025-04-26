@@ -15,9 +15,8 @@ function App() {
       if (window.scrollY === 0) {
         setIstopOfScreen(true)
         setSelectedPage(SelectedPage.Home)
-      } else {
-        setIstopOfScreen(false)
-      }
+      } 
+      if (window.scrollY !== 0) setIstopOfScreen(false);
     }
     window.addEventListener(`scroll`, handleScroll)
     return ()=> removeEventListener(`scroll`, handleScroll)

@@ -55,12 +55,12 @@ const Benefits = ({ setSelectedPage }: Props) => {
             viewport={{ once: true, amount: 0.2 }}
             onViewportEnter={()=> setSelectedPage(SelectedPage.Benefits)}
             id="benefits" className="mx-auto min-h-full w-5/6 py-10">
-            <div className="my-16">
-                <div className="flex flex-col items-center">
+            <div className="mt-16">
+                <div className="flex flex-col md:items-center">
                 <motion.div variants={itemVariants1}>
                     <Htext>More Than Just A Gym</Htext>
                 </motion.div>
-                <div className='md:w-5/6 text-center'>
+                <div className='md:w-5/6 md:text-center text-left'>
                 <motion.p variants={itemVariants1} className="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex temporibus dolorum ipsum odit laborum. Expedita beatae, ullam delectus tenetur amet voluptatibus harum ipsum facere temporibus dolores culpa modi quas. Ea.</motion.p>
                 </div>
                 </div>
@@ -108,7 +108,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
                         <div>
                             <div className="relative">
                             <ActionButton setSelectedPage={setSelectedPage}>Join now</ActionButton>
-                            <img src={Sparkles} alt="Sparkles" className="absolute lg:block  -top-14 right-5"/>
+                            <img src={Sparkles} alt="Sparkles" className="absolute lg:block w-32 -bottom-20 right-5"/>
                             </div>
                         </div>
                     </motion.div>

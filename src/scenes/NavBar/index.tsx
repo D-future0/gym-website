@@ -16,11 +16,11 @@ type Props = {
 
 function NavBar({ isTopOfScreen, selectedPage, setSelectedPage }: Props) {
   const [isMenuToggle, setIsMenuToggle] = useState<boolean>(false)
-  
+
   const flexBetween = 'flex items-center justify-between'
   const flexCenter = 'flex items-center justify-center'
   const isAboveMediumScreen = useMediaQuery('(min-width: 1060px)')
-  const navBackground = isTopOfScreen ? '': 'bg-[#FFE1E0] drop-shadow'
+  const navBackground = isTopOfScreen ? '' : 'bg-[#FFE1E0] drop-shadow'
   return (
     <nav>
       <div className={`${flexCenter} ${navBackground} fixed top-0 z-30 w-full py-6`}>
@@ -45,29 +45,25 @@ function NavBar({ isTopOfScreen, selectedPage, setSelectedPage }: Props) {
               </button>
           }
         </div>
-        {/*moble menu*/}
-        {
-          !isAboveMediumScreen && isMenuToggle ?
-            <div className='fixed right-0 bottom-0 z-60 h-full w-[250px] bg-[#FFE1E0]'>
-              <div className='flex justify-end items-center py-6 px-10'>
-                <button className='rounded-full bg-[#FFE1E0] p-2' onClick={() => { setIsMenuToggle(!isMenuToggle); }}>
-                  <XMarkIcon width={30} className='text-gray-400 text-3xl' />
-                </button>
-              </div>
-              <div className='ml-[25%] text-xl flex flex-col gap-8'>
-                <Link page='Home' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                <Link page='Benefits' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                <Link page='Our Classes' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                <Link page='Contact Us' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-              </div>
-              {/* <div className={`${flexCenter} w-full gap-8`}>
-                    <p>sign in</p>
-                    <ActionButton setSelectedPage={setSelectedPage}>Become a Member</ActionButton>
-                  </div> */}
-            </div>
-            : <div></div>
-        }
       </div>
+      {/*moble menu*/}
+      {
+        !isAboveMediumScreen && isMenuToggle &&
+        <div className='fixed right-0 bottom-0 z-40 h-full w-[300px] bg-[#FFE1E0] drop-shadow-xl'>
+          <div className='flex justify-end items-center py-6 px-10'>
+            <button className='rounded-full bg-[#FFE1E0] p-2' onClick={() => setIsMenuToggle(!isMenuToggle)}>
+              <XMarkIcon width={30} className='text-gray-400 text-3xl' />
+            </button>
+          </div>
+          <div className='ml-[25%] text-xl flex flex-col gap-8'>
+            <Link page='Home' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+            <Link page='Benefits' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+            <Link page='Our Classes' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+            <Link page='Contact Us' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+          </div>
+        </div>
+      }
+
     </nav>
   );
 }

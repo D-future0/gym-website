@@ -31,10 +31,10 @@ const ContactUs = ({ setSelectedPage }: Props) => {
         }
     }
     return (
-        <section id="contactus" className="mx-auto md:w-5/6 p-4 pb-10">
+        <section id="contactus" className="mx-auto md:w-5/6 p-4 pb-16">
             <motion.div
                 onViewportEnter={() => (setSelectedPage(SelectedPage.ContactUs))}
-                className="lg:flex items-center lg:justify-between mt-20"
+                className="lg:flex items-center lg:justify-between mt-24"
             >
 
                 <div>
@@ -43,7 +43,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true, amount: 0.2 }}
-                    className="w-full pr-10"
+                    className="w-full px-4"
                 >
                     <Htext>
                         <span className="text-[#FF6B66]">JOIN NOW</span> {" "} TO GET IN SHAPE
@@ -55,7 +55,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true, amount: 0.2 }}
-                    className="w-full md:pr-10"
+                    className="w-full px-4 md:pr-10"
                     onSubmit={() => HandleSubmit()}
                     method="POST"
                     action={"https://formsubmit.co/2898cdc78b1433bd26a5e8819bd060f5"}
@@ -123,7 +123,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                 >
                     <img src={EvolveText} alt="ContactUsPageGraphic" className="absolute md:block z-[10] -bottom-14 -left-5 hidden"/>
                     <div>
-                    <img src={ContactUsPageGraphic} alt="ContactUsPageGraphic" className="max-w-2xl"/>
+                    <img src={ContactUsPageGraphic} alt="ContactUsPageGraphic" className="max-w-2xl px-4"/>
                     </div>
                 </motion.div>
             </motion.div>
