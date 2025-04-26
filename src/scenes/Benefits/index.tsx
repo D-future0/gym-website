@@ -32,17 +32,17 @@ const benefit: Array<BenefitsType> = [
     {
         icon: <HomeModernIcon width={32} />,
         title: "Lorem ipsum dolor sit amet.",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, officiis? Accusantium libero corporis ut perferendis modi?"
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, officiis?"
     },
     {
         icon: <UserGroupIcon width={32} />,
         title: "Lorem ipsum dolor sit amet.",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, officiis? Accusantium libero corporis ut perferendis modi?"
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, officiis?"
     },
     {
         icon: <AcademicCapIcon width={32} />,
         title: "Lorem ipsum dolor sit amet.",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, officiis? Accusantium libero corporis ut perferendis modi?"
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, officiis?"
     },
 ]
 
